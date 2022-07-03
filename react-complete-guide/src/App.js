@@ -31,9 +31,12 @@ const App = () => {
         },
     ];
 
+    const addExpenseHandler = expense => {};
+
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpense={addExpenseHandler} />
+            {/* 인자를 전달하는 포인터함수는 on으로 시작하는것이 관례적  */}
             <Expenses items={expenses} />
         </div>
     );
